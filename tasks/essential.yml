@@ -1,0 +1,10 @@
+- name: Upgrade packages
+  apt:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install essential packages
+  package:
+    name:
+      - mdadm
+    state: latest
